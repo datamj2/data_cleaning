@@ -1,4 +1,4 @@
-Notes for run_Analysis.R
+Notes for run_analysis.R
 
 
 The UCI HAR Dataset should be unzipped to the working directory.
@@ -18,8 +18,9 @@ Next, descriptive names are assigned to the data_select variables (columns), usi
 In the last step, data_select is filtered to provide the mean of each measurement column by each combination of subject and activity. This data set is called data_final and is returned by run_Analysis.
 
 Data_final is a tidy data set because it meets the three requirements for tidy data:
+1) each variable is a column
+2) each observation is as row
+3) each observational unit forms a table
 
-
-The following code will load ?data.final? from the text file:
-
+The following code will load “data.final” from the text file:
 data_final<-read.table("data_final.txt",header=TRUE,sep="\t",check.names=FALSE)
