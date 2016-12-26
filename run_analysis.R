@@ -83,5 +83,5 @@ names(data_select) <- colnames_select #rename columns
 # ----------- get column averages --------------------------
 # ----------------------------------------------------
 data_final<-data_select %>% group_by(subject,activity) %>% summarise_each(funs(mean))
-write.table(data_final,"data_final.txt", append = FALSE, quote=FALSE, sep = "\t",col.names = colnames_select) #save to txt file in working directory
+write.table(data_final,"data_final.txt", append = FALSE, quote=FALSE, sep = "\t",col.names = colnames_select,row.name=FALSE) #save to txt file in working directory
 }
